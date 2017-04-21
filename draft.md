@@ -233,6 +233,7 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 
 ![table](./figures/table.png)
 
+---
 
 # 図の貼り方
 
