@@ -238,7 +238,8 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 \usepackage[dvipdfmx]{graphicx}
 ```
 
-latex を貼りたい場所に書く
+図を貼りたい場所に書く
+
 ``` latex
 \section{図の貼り方}
 \begin{figure}[htbp]
