@@ -220,8 +220,6 @@ latex を貼りたい場所に書く
 \end{figure}
 ```
 
----
-
 ![figure](./figures/figure2.png)
 
 ---
