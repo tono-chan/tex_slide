@@ -5,10 +5,12 @@
 
 # 本日のスライド
 
-HTML 形式
+HTML 形式(https://github.com/tono-chan/tex_slide/blob/master/draft.md)
+
 ![markdown](./figures/markdown_url.png)
 
-SLIDE 形式
+SLIDE 形式(https://tono-chan.github.io/tex_slide/)
+
 ![slide](./figures/slide_url.png)
 
 ---
@@ -287,7 +289,7 @@ latex を貼りたい場所に書く
 
 ## よくあるエラー
 
-- Please type another input file name :　
+- Please type another input file name :
 ファイル名間違い
 
 - ! Missing $ inserted....? :
@@ -296,7 +298,7 @@ $の数の不整合。数式は$$ではさむ。単独の$出力は \$と入れ�
 - ! Emergency stop.....l.19 :
 19行目が怪しい
 
-- ! Undefined control sequence. l.30 \fotnotetext : 　
+- ! Undefined control sequence. l.30 \fotnotetext :
 footnotetextの間違い
 
 [LaTeX Manual](http://ribf.riken.jp/apr/guide-jp/LaTeX_Manual-jp.html)
@@ -331,13 +333,10 @@ L'crivain で作成した tex ファイルを TeXworks で開くと文字化け�
 
 ---
 
----
-
 ## 画像がないとき
 デモ
 
-
-p---
+---
 
 # 余白を調節したい
 ドキュメントクラスやドキュメントクラスオプションを変更する
