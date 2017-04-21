@@ -209,6 +209,33 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 
 ---
 
+---
+
+# 表の貼り方
+
+```latex
+\section{表の作成}
+\begin{table}
+  \caption{table sample}
+  \label{tb:sample}
+  \centering
+  \begin{tabular}{lcr}
+    \hline
+    番号 & 名前 & 点数 \\
+    \hline \hline
+    1 & 一郎 & 100 \\
+    2 & 次郎 & 95 \\
+    3 & 三郎 & 60 \\
+    \hline
+  \end{tabular}
+\end{table}
+```
+
+---
+
+![table](./figures/table.png)
+
+
 # 図の貼り方
 
 プリアンブル部(begin{document}の手前)に以下のパッケージを指定
@@ -255,31 +282,6 @@ latex を貼りたい場所に書く
 
 最近のlatexは png や jpg 形式の画像でも直接貼れるので，変換する必要はなくなっている(dvipdfmxを使う場合)
 
----
-
-# 表の貼り方
-
-```latex
-\section{表の作成}
-\begin{table}
-  \caption{table sample}
-  \label{tb:sample}
-  \centering
-  \begin{tabular}{lcr}
-    \hline
-    番号 & 名前 & 点数 \\
-    \hline \hline
-    1 & 一郎 & 100 \\
-    2 & 次郎 & 95 \\
-    3 & 三郎 & 60 \\
-    \hline
-  \end{tabular}
-\end{table}
-```
-
----
-
-![table](./figures/table.png)
 
 ---
 
