@@ -331,7 +331,12 @@ L'crivain で作成した tex ファイルを TeXworks で開くと文字化け�
 ---
 
 ## 画像がないとき
-デモ
+
+```
+ LaTeX Warning: File `****.jpg' not found on input\|
+```
+
+適切なファイル名を指定してください
 
 ---
 
