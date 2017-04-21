@@ -133,9 +133,9 @@ latexのコンパイル方法は何通りかあるので興味があれば調べ
 
 ```latex
 \documentclass{...}
-\title{...}  -+
-\author{...}  |プリアンブルに記述
-\date{...}   -+
+\title{LaTeXゼミ}  -+
+\author{外村 耀平}  |プリアンブルに記述
+\date{\today}   -+
 \begin{document}
 \maketitle → 本文領域内に記述
 ```
