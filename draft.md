@@ -7,6 +7,16 @@
 
 ---
 
+# 本日のスライド
+
+HTML 形式
+![markdown](./figures/markdown_url.png)
+
+SLIDE 形式
+![slide](./figures/slide_url.png)
+
+---
+
 # 目次
 - LaTeX ってなに？
 - LaTeXのコンパイルの仕方
@@ -326,6 +336,8 @@ L'crivain で作成した tex ファイルを TeXworks で開くと文字化け�
 ---
 
 ## 画像がないとき
+デモ
+
 
 ---
 
@@ -365,6 +377,9 @@ setlength で調節する．辛い．
 ---
 
 # 課題
+
+- 表を挿入した文書を作成せよ
+- 任意の画像を挿入した文書を作成せよ
 
 ---
 
