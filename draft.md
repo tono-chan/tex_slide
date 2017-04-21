@@ -220,6 +220,8 @@ latex を貼りたい場所に書く
 \end{figure}
 ```
 
+---
+
 ![figure](./figures/figure2.png)
 
 ---
@@ -251,6 +253,8 @@ latex を貼りたい場所に書く
   \end{tabular}
 \end{table}
 ```
+
+---
 
 ![table](./figures/table.png)
 
@@ -285,10 +289,15 @@ L'crivain で作成した tex ファイルを TeXworks で開くと文字化け�
 ドキュメントクラスやドキュメントクラスオプションを変更する
 
 簡単な方法
-\documentclass[11pt]{jarticle} -> \documentclass[11pt,a4j]{jsarticle}
+\documentclass[11pt,a4paper]{jarticle}
+↓
+\documentclass[11pt,a4j]{jsarticle}
 
 自前で細かい単位まで調節したい場合
 setlength で調節する．辛い．
+
+---
+
 ````
 ¥documentclass[11pt,a4paper]{jsarticle}
 
@@ -309,6 +318,7 @@ setlength で調節する．辛い．
 ¥end{document}
 ````
 
+---
 
 ## 参考元
 
