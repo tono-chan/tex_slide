@@ -21,19 +21,24 @@
 
 # LaTeX って何？
 TeX とは理系でよく使われる組版言語です．
+
 LaTeX はTeXに対して機能拡張をして使いやすくしたものです．
+
 LaTeX を利用することで整った体裁の文書を作成できます．
 
 ---
 
 # 組版って？
 
-組版・・・・印刷を作るときに、どんなサイズの紙に、紙のどのあたりに、どんな文字で、どんな並べ方で、文字や図版をレイアウトするかといったレイアウト作業
+組版・・・・印刷を作るときに、どんなサイズの紙に、紙のどのあたりに、どんな文字で、どんな並べ方で、
+
+文字や図版をレイアウトするかといったレイアウト作業
 
 ---
 
 # TeX ができた由来
 ドナルド・クヌース(Donald Ervin Knuth) って人が自分の本を出版するときに、業者に依頼した組版の出来に不満。
+
 あまりの汚さにブチ切れたクヌース先生が自前で組版するために作ったソフト。
 
 なければ自分で作るってところがプログラマー気質ですよね。
@@ -41,7 +46,9 @@ LaTeX を利用することで整った体裁の文書を作成できます．
 ---
 
 # LATEXのコンパイルの仕方
-GUIの操作は使用するソフトによって異なるので省略。コマンドライン操作のみで説明します。
+GUIの操作は使用するソフトによって異なるので省略。
+
+コマンドライン操作のみで説明します。
 
 tex ファイルから pdfファイル作成までを記述
 
@@ -51,7 +58,7 @@ tex ファイルから pdfファイル作成までを記述
 
 使用している文字コードがshift_jisの場合(使用ソフトがL'ecrivain)
 
-```
+```bash
 $ platex sample.tex　　 #dviファイルを作成
 $ dvipdfmx sample.dvi   #pdfファイルを作成
 ```
@@ -61,7 +68,7 @@ $ dvipdfmx sample.dvi   #pdfファイルを作成
 ## uplatex
 使用している文字コードがutf8の場合(使用ソフトがTexWorks)
 
-```
+```bash
 $ uplatex sample.tex     #dviファイルを作成
 $ dvipdfmx sample.dvi    #pdfファイルを作成
 ```
@@ -71,7 +78,7 @@ $ dvipdfmx sample.dvi    #pdfファイルを作成
 ## 2回もコンパイルがめんどくさい人向け
 
 shift_jis の場合
-```
+```bash
 $ ptex2pdf -l sample.tex
 ```
 
@@ -82,7 +89,7 @@ $ ptex2pdf -u -l sample.tex
 
 ---
 
-## いちいちコンパイルコマンドを打つのが面倒くさい人向け
+## いちいちコンパイルコマンドを打つのが面倒くさい人向け：下準備
 下準備
 
 以下のファイルをユーザーフォルダ直下(compフォルダ)に [.latexmkrc](.latexmkrc) という名前で保存
@@ -101,9 +108,13 @@ $ pvc_view_file_via_temporary = 0;
 $ pdf_previewer = 'SumatraPDF -reuse-instance'
 ```
 
+---
+
+## いちいちコンパイルコマンドを打つのが面倒くさい人向け(続き)
+
 tex ファイルを作成した時に以下のコマンドを実行
-```
-latexmk -pvc sample.tex
+```bash
+$ latexmk -pvc sample.tex
 ```
 
 latexのコンパイル方法は何通りかあるので興味があれば調べてください。
@@ -231,13 +242,12 @@ latex を貼りたい場所に書く
 
 ## eps 画像の扱いについて
 古いlatexの使い方紹介サイトでは画像を貼るときは，「eps画像に変換して画像を貼りなさい」と書いてあることがある．
+
 最近のlatexは png や jpg 形式の画像でも直接貼れるので，変換する必要はなくなっている(dvipdfmxを使う場合)
 
 ---
 
 # 表の貼り方
-
-[LaTeX表組み](http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/table/table.php)
 
 ```latex
 \section{表の作成}
@@ -267,6 +277,24 @@ latex を貼りたい場所に書く
 
 ---
 
+## よくあるエラー
+
+- Please type another input file name :　
+ファイル名間違い
+
+- ! Missing $ inserted....? :
+$の数の不整合。数式は$$ではさむ。単独の$出力は \$と入れる。
+
+- ! Emergency stop.....l.19 :
+19行目が怪しい
+
+- ! Undefined control sequence. l.30 \fotnotetext : 　
+footnotetextの間違い
+
+[LaTeX Manual](http://ribf.riken.jp/apr/guide-jp/LaTeX_Manual-jp.html)
+
+---
+
 ## 文字コードのエラー
 日本語でlatex を書いているときに問題になるのが文字コードの違い。利用するOSやソフトによってデフォルトの文字コードが異なる。
 
@@ -288,7 +316,16 @@ latex を貼りたい場所に書く
 ### 文字コードの違いで困ること
 
 文字化けする！
-L'crivain で作成した tex ファイルを TeXworks で開くと文字化けします。逆もしかり。適切な文字コードを指定してからファイルを開きなおしてください。
+
+L'crivain で作成した tex ファイルを TeXworks で開くと文字化けします。逆もしかり。
+
+適切な文字コードを指定してからファイルを開きなおしてください。
+
+---
+
+---
+
+## 画像がないとき
 
 ---
 
@@ -327,8 +364,15 @@ setlength で調節する．辛い．
 
 ---
 
+# 課題
+
+---
+
 ## 参考元
 
-[日本人のための LaTeX タブー集 ～画像読込編～](http://qiita.com/zr_tex8r/items/5413a29d5276acac3771)
+- [latex 入門](https://texwiki.texjp.org/?LaTeX入門)
 
-[使ってはいけない LaTeX のコマンド・パッケージ・作法](ichiro-maruta.blogspot.jp/2013/03/latex.html)
+- [日本人のための LaTeX タブー集 ～画像読込編～](http://qiita.com/zr_tex8r/items/5413a29d5276acac3771)
+
+- [使ってはいけない LaTeX のコマンド・パッケージ・作法](ichiro-maruta.blogspot.jp/2013/03/latex.html)
+
