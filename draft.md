@@ -192,7 +192,10 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 
 ## 数式を書くときの注意点
 数式内で英単語を入れたいときはローマン体になるように！(イタリックは基本的に変数扱い)
+```
 \mathrm{ローマン体にしたい部分}
+```
+
 
 ```latex
 \begin{align}
@@ -296,8 +299,6 @@ $の数の不整合。数式は$$ではさむ。単独の$出力は \$と入れ�
 - ! Emergency stop.....l.19 :
 19行目が怪しい
 
-- ! Undefined control sequence. l.30 \fotnotetext :
-footnotetextの間違い
 
 [LaTeX Manual](http://ribf.riken.jp/apr/guide-jp/LaTeX_Manual-jp.html)
 
