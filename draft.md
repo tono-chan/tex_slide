@@ -379,6 +379,12 @@ setlength で調節する．辛い．
 - 表を挿入した文書を作成せよ
 - 任意の画像を挿入した文書を作成せよ
 
+サンプルのtexファイルは
+[ここにあります](./sample/sample.tex)
+
+サンプルのshift_jis版は
+[ここ](./sample/sample_shiftjis.tex)
+
 ---
 
 ## 参考元
