@@ -22,7 +22,7 @@ SLIDE 形式
 - LaTeXのコンパイルの仕方
 - タイトルの作成
 - 概要の作成
-- 箇条書き　　　　
+- 箇条書き
 - 表
 - 図
 - LaTeX を作るうえでの注意点
@@ -69,7 +69,7 @@ tex ファイルから pdfファイル作成までを記述
 使用している文字コードがshift_jisの場合(使用ソフトがL'ecrivain)
 
 ```bash
-$ platex sample.tex　　 #dviファイルを作成
+$ platex sample.tex     #dviファイルを作成
 $ dvipdfmx sample.dvi   #pdfファイルを作成
 ```
 
@@ -378,6 +378,7 @@ setlength で調節する．辛い．
 
 # 課題
 
+- 数式を挿入した文書を作成せよ
 - 表を挿入した文書を作成せよ
 - 任意の画像を挿入した文書を作成せよ
 
