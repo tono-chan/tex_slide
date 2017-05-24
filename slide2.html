@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="latex-ゼミ-2" class="slide level1">
+<h1>latex ゼミ 2</h1>
+</section>
+<section class="slide level1">
+
+<h2 id="本日のスライド">本日のスライド</h2>
+<p>HTML 形式(https://github.com/tono-chan/tex_slide/blob/master/draft.md)</p>
+<figure>
+<img src="./figures/markdown_url.png" width="377" />
+</figure>
+<p>SLIDE 形式(https://tono-chan.github.io/tex_slide/)</p>
+<figure>
+<img src="./figures/slide_url.png" width="188" />
+</figure>
+<p>注意！</p>
+<p>リンク消失の可能性あり。というか今年中(2017)にはこのファイルの公開を終了する。</p>
+</section>
+<section class="slide level1">
+
+<h2 id="目次">目次</h2>
+<ul>
+<li><a href="#/latex-ゼミ-2">latex ゼミ 2</a></li>
+<li><a href="#/latex-の書き方">LaTeX の書き方</a></li>
+<li><a href="#/latex-のエラー修正">latex のエラー修正</a></li>
+<li><a href="#/課題">課題</a></li>
+<li><a href="#/参考元">参考元</a></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="latex-って何">LaTeX って何？</h2>
+<p>TeX とは理系でよく使われる組版言語です．</p>
+<p>LaTeX はTeXに対して機能拡張をして使いやすくしたものです．</p>
+<p>LaTeX を利用することで整った体裁の文書を作成できます．</p>
+</section>
+<section class="slide level1">
+
+<h2 id="組版って">組版って？</h2>
+<p>組版・・・・印刷を作るときに、どんなサイズの紙に、紙のどのあたりに、どんな文字で、どんな並べ方で、</p>
+<p>文字や図版をレイアウトするかといったレイアウト作業</p>
+</section>
+<section class="slide level1">
+
+<h2 id="tex-ができた由来">TeX ができた由来</h2>
+<p>ドナルド・クヌース(Donald Ervin Knuth) って人が自分の本を出版するときに、業者に依頼した組版の出来に不満。</p>
+<p>あまりの汚さにブチ切れたクヌース先生が自前で組版するために作ったソフト。</p>
+<p>なければ自分で作るってところがプログラマー気質ですよね。</p>
+</section>
+<section class="slide level1">
+
+<h2 id="latexのコンパイルの仕方">LATEXのコンパイルの仕方</h2>
+<p>GUIの操作は使用するソフトによって異なるので省略。</p>
+<p>コマンドライン操作のみで説明します。</p>
+<p>tex ファイルから pdfファイル作成までを記述</p>
+</section>
+<section class="slide level1">
+
+<h3 id="platex">platex</h3>
+<p>使用している文字コードがshift_jisの場合(使用ソフトがL'ecrivain)</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">platex</span> sample.tex     <span class="co">#dviファイルを作成</span>
+$ <span class="kw">dvipdfmx</span> sample.dvi   <span class="co">#pdfファイルを作成</span></code></pre></div>
+</section>
+<section class="slide level1">
+
+<h3 id="uplatex">uplatex</h3>
+<p>使用している文字コードがutf8の場合(使用ソフトがTexWorks)</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">uplatex</span> sample.tex     <span class="co">#dviファイルを作成</span>
+$ <span class="kw">dvipdfmx</span> sample.dvi    <span class="co">#pdfファイルを作成</span></code></pre></div>
+</section>
+<section class="slide level1">
+
+<h3 id="回もコンパイルがめんどくさい人向け">2回もコンパイルがめんどくさい人向け</h3>
+<p>shift_jis の場合</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">ptex2pdf</span> -l sample.tex</code></pre></div>
+<p>utf8の場合</p>
+<pre><code>$ ptex2pdf -u -l sample.tex</code></pre>
+</section>
+<section class="slide level1">
+
+<h3 id="いちいちコンパイルコマンドを打つのが面倒くさい人向け下準備">いちいちコンパイルコマンドを打つのが面倒くさい人向け：下準備</h3>
+<p>下準備</p>
+<p>以下のファイルをユーザーフォルダ直下(compフォルダ)に <a href="/distribute/.latexmkrc">.latexmkrc</a> という名前で保存</p>
+<div class="sourceCode"><pre class="sourceCode perl"><code class="sourceCode perl"><span class="kw">#!/usr/bin/env perl</span>
+<span class="dt">$latex</span>            = <span class="kw">&#39;</span><span class="st">platex -synctex=1 -halt-on-error</span><span class="kw">&#39;</span>;
+<span class="dt">$latex_silent</span>     = <span class="kw">&#39;</span><span class="st">platex -synctex=1 -halt-on-error -interaction=batchmode</span><span class="kw">&#39;</span>;
+<span class="dt">$bibtex</span>           = <span class="kw">&#39;</span><span class="st">pbibtex</span><span class="kw">&#39;</span>;
+<span class="dt">$dvipdf</span>           = <span class="kw">&#39;</span><span class="st">dvipdfmx %O -o %D %S</span><span class="kw">&#39;</span>;
+<span class="dt">$makeindex</span>        = <span class="kw">&#39;</span><span class="st">mendex %O -o %D %S</span><span class="kw">&#39;</span>;
+<span class="dt">$max_repeat</span>       = <span class="dv">5</span>;
+<span class="dt">$pdf_mode</span>     = <span class="dv">3</span>; <span class="co"># generates pdf via dvipdfmx</span>
+
+$ pvc_view_file_via_temporary = <span class="dv">0</span>;
+$ pdf_previewer = <span class="kw">&#39;</span><span class="st">SumatraPDF -reuse-instance</span><span class="kw">&#39;</span></code></pre></div>
+</section>
+<section class="slide level1">
+
+<h3 id="いちいちコンパイルコマンドを打つのが面倒くさい人向け続き">いちいちコンパイルコマンドを打つのが面倒くさい人向け(続き)</h3>
+<p>tex ファイルを作成した時に以下のコマンドを実行</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">latexmk</span> -pvc sample.tex</code></pre></div>
+<p>latexのコンパイル方法は何通りかあるので興味があれば調べてください。</p>
+</section>
+<section id="latex-の書き方" class="slide level1">
+<h1>LaTeX の書き方</h1>
+</section>
+<section class="slide level1">
+
+<h2 id="タイトル">タイトル</h2>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\documentclass{...} 
+\title{LaTeXゼミ}  <span class="co">%プリアンブル部に記述</span>
+\author{外村 耀平} 
+\date{\today}  
+\begin{document}
+\maketitle <span class="co">% 本文領域内に記述</span></code></pre></div>
+<figure>
+<img src="./figures/title.png" alt="maketitleの表示例" width="188" /><figcaption>maketitleの表示例</figcaption>
+</figure>
+</section>
+<section class="slide level1">
+
+<h2 id="概要">概要</h2>
+<p>論文内容を短くまとめて書いたもの</p>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\begin{abstract}
+この文書ではLaTeXの書き方について説明する。ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+\noindent
+見出し用語:AdaBoost 分類器，網膜画像, 血管分割
+\end{abstract}</code></pre></div>
+<figure>
+<img src="./figures/abstract.png" alt="abstract" width="377" /><figcaption>abstract</figcaption>
+</figure>
+</section>
+<section class="slide level1">
+
+<h2 id="数式">数式</h2>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\begin{align}
+x^2 + 2x + 1 &amp;= 0
+(x + 1)^2 &amp;= 0
+\end{align}
+
+文中に数式$x^2 + 2x + 1 = 0$を挿入することもできる．</code></pre></div>
+<figure>
+<img src="./figures/align.png" alt="数式の例1" width="377" /><figcaption>数式の例1</figcaption>
+</figure>
+<p>\begin{eqnarray} や \begin{eqnarray*} を使用しているサイトが多いのですが，現在は非推奨です．</p>
+</section>
+<section class="slide level1">
+
+<h2 id="複雑な数式">複雑な数式</h2>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\begin{align}
+\int_{1}^{4}x dx = \left[ \frac{1}{2}x^2 \right]_1^4
+x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
+\end{align}</code></pre></div>
+<figure>
+<img src="./figures/align2.png" alt="数式の例2" width="151" /><figcaption>数式の例2</figcaption>
+</figure>
+</section>
+<section class="slide level1">
+
+<h2 id="数式を書くときの注意点">数式を書くときの注意点</h2>
+<p>数式内で英単語を入れたいときはローマン体になるように！(イタリックは基本的に変数扱い)</p>
+<pre><code>\mathrm{ローマン体にしたい部分}</code></pre>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\begin{align}
+\times precision &amp;=
+\displaystyle \frac{true\ positive}{true\ positive + false\ positive} \nonumber\\
+\bigcirc \mathrm{recall} &amp;=
+\displaystyle \frac{ \mathrm{true\ positive}}{\mathrm{true\ positive} + \mathrm{false\ negative}} \nonumber
+\end{align}</code></pre></div>
+<figure>
+<img src="./figures/mathrm.png" alt="mathrmを適応した表示例" width="377" /><figcaption>mathrmを適応した表示例</figcaption>
+</figure>
+</section>
+<section class="slide level1">
+
+<h2 id="表の貼り方">表の貼り方</h2>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\section{表の作成}
+\begin{table}
+  \caption{table sample}
+  \label{tb:sample}
+  \centering
+  \begin{tabular}{lcr}
+    \hline
+    番号 &amp; 名前 &amp; 点数 \\
+    \hline \hline
+    1 &amp; 一郎 &amp; 100 \\
+    2 &amp; 次郎 &amp; 95 \\
+    3 &amp; 三郎 &amp; 60 \\
+    \hline
+  \end{tabular}
+\end{table}</code></pre></div>
+<figure>
+<img src="./figures/table.png" alt="table環境の表示例" width="188" /><figcaption>table環境の表示例</figcaption>
+</figure>
+</section>
+<section class="slide level1">
+
+<h2 id="図の貼り方">図の貼り方</h2>
+<p>プリアンブル部(begin{document}の手前)に以下のパッケージを指定</p>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\usepackage[dvipdfmx]{graphicx}</code></pre></div>
+<p>図を貼りたい場所に書く</p>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\section{図の貼り方}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=10cm]{./figures/kendai_a22.jpg}
+  \caption{figure sample}
+  \label{fig:sample}
+\end{figure}</code></pre></div>
+<figure>
+<img src="./figures/figure.png" alt="図の表示例" width="377" /><figcaption>図の表示例</figcaption>
+</figure>
+</section>
+<section class="slide level1">
+
+<h2 id="図を並べる">図を並べる</h2>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\begin{figure}[htbp]
+  \centering
+  \begin{minipage}{0.48\hsize}
+    \includegraphics[width=\hsize]{./figures/kendai_a22.jpg}
+  \end{minipage}
+  \begin{minipage}{0.48\hsize}
+    \includegraphics[width=\hsize]{./figures/kendai_a22.jpg}
+  \end{minipage}
+  \caption{2 figures sample}
+\end{figure}</code></pre></div>
+<figure>
+<img src="./figures/figure2.png" alt="minipageの表示例" width="377" /><figcaption>minipageの表示例</figcaption>
+</figure>
+</section>
+<section class="slide level1">
+
+<h2 id="eps-画像の扱いについて">eps 画像の扱いについて</h2>
+<p>古いlatexの使い方紹介サイトでは画像を貼るときは，「eps画像に変換して画像を貼りなさい」と書いてあることがある．</p>
+<p>最近のlatexは png や jpg 形式の画像でも直接貼れるので，変換する必要はなくなっている(dvipdfmxを使う場合)</p>
+<p>なお、我らが研究室のサイトには「図の画像は、必ずeps形式で用紙してincludeする」と書いてある。</p>
+</section>
+<section class="slide level1">
+
+<h2 id="参考文献の書き方">参考文献の書き方</h2>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\begin{thebibliography}{9} <span class="co">% 10以上参考文献を記述する場合、値を99にする。</span>
+  \bibitem{キー1} 著者:タイトル1,出典,(年)
+  \bibitem{キー2} 著者:タイトル2,出典,(年)
+\end{thebibliography}</code></pre></div>
+<figure>
+<img src="./figures/bibref.png" alt="参考文献の表示例" width="188" /><figcaption>参考文献の表示例</figcaption>
+</figure>
+</section>
+<section class="slide level1">
+
+<h2 id="研究室内でのルール1">研究室内でのルール1</h2>
+<ul>
+<li>コンパイル後のメッセージを確認して，エラー(Error)やワーニング(Warning)の有無を確認して，基本的にエラーが出ないようにする．</li>
+<li>コンパイル後，ラベルの重複や対応にミスがないか，?のまま残っていないかを確認する．</li>
+<li>指定のスタイルファイルを使用している場合，そのフォーマットを崩す命令，vspace, hspaceなどは使ってはいけない．</li>
+<li>図の画像は，必ずeps形式で用意してincludeする．</li>
+<li>図の位置は，必ず[t]で指定する</li>
+<li>画像のサイズ変更には，原則width=のみを使う．</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="研究室内でのルール2">研究室内でのルール2</h2>
+<ul>
+<li>図中の文字サイズは，本文中の文字サイズと同じか，やや小さい程度までになるようにする．</li>
+<li>表の文字サイズ変更にscaleboxを使う場合，原則0.8未満は使わない．一行に入らないときにはレイアウト変更により対応する．</li>
+<li>改行は空行を空けることで行う．\（バックスラッシュ2つによる改行）は表以外では使わない</li>
+<li>数字はすべて半角を使用する</li>
+<li>・や〜などの記号は使わない．</li>
+<li>項より細かい部分を作成してはいけない．項より細かい部分の作成が必要な場合は，全体の構成が悪いので，構成を見直す．</li>
+</ul>
+</section>
+<section id="latex-のエラー修正" class="slide level1">
+<h1>latex のエラー修正</h1>
+</section>
+<section class="slide level1">
+
+<h2 id="よくあるエラー">よくあるエラー</h2>
+<ul>
+<li><p>Please type another input file name : ファイル名間違い</p></li>
+<li><p>! Missing $ inserted....? : <span class="math inline"><em>の</em><em>数</em><em>の</em><em>不</em><em>整</em><em>合</em>。<em>数</em><em>式</em><em>は</em></span><span class="math inline"><em>で</em><em>は</em><em>さ</em><em>む</em>。<em>単</em><em>独</em><em>の</em></span>出力は $と入れる。</p></li>
+<li><p>! Emergency stop.....l.19 : 19行目が怪しい</p></li>
+</ul>
+<p><a href="http://ribf.riken.jp/apr/guide-jp/LaTeX_Manual-jp.html">LaTeX Manual</a></p>
+</section>
+<section class="slide level1">
+
+<h2 id="文字コードのエラー">文字コードのエラー</h2>
+<p>日本語でlatex を書いているときに問題になるのが文字コードの違い。利用するOSやソフトによってデフォルトの文字コードが異なる。</p>
+<ul>
+<li>Windows : Shift-Jis</li>
+<li>Mac : UTF8</li>
+<li>Linux : UTF8 ( 古いバージョンだと EUC )</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="ソフトウェアのデフォルトエンコード">ソフトウェアのデフォルトエンコード</h2>
+<p>ソフトウェアの設定によってデフォルトの文字コードを変更可能だが、ソフトによっても初期設定が異なる。</p>
+<ul>
+<li>L'ecrivain : Shift-Jis</li>
+<li>TeXworks : UTF8</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h3 id="文字コードの違いで困ること">文字コードの違いで困ること</h3>
+<p>文字化けする！</p>
+<p>L'crivain で作成した tex ファイルを TeXworks で開くと文字化けします。逆もしかり。</p>
+<p>適切な文字コードを指定してからファイルを開きなおしてください。</p>
+</section>
+<section class="slide level1">
+
+<h2 id="画像がないとき">画像がないとき</h2>
+<pre><code> LaTeX Warning: File `****.jpg&#39; not found on input\|</code></pre>
+<p>適切なファイル名を指定してください</p>
+</section>
+<section class="slide level1">
+
+<h2 id="余白を調節したい">余白を調節したい</h2>
+<p>ドキュメントクラスやドキュメントクラスオプションを変更する</p>
+<p>簡単な方法</p>
+<pre><code>\documentclass[11pt,a4paper]{jarticle}
+↓
+\documentclass[11pt,a4j]{jsarticle}</code></pre>
+<p>自前で細かい単位まで調節したい場合 * geometory パッケージで調節する * setlength で調節する．辛い．</p>
+</section>
+<section class="slide level1">
+
+<h3 id="geometry-の例">geometry の例</h3>
+<p>プリアンブル部に記述する</p>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry}</code></pre></div>
+</section>
+<section class="slide level1">
+
+<h3 id="setlength-の例">setlength の例</h3>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\documentclass[11pt,a4paper]{jsarticle}
+
+\setlength{\textheight}{\paperheight}   <span class="co">% 紙面縦幅を本文領域にする（BOTTOM=-TOP）</span>
+\setlength{\topmargin}{4.6truemm}       <span class="co">% 上の余白を30mm（=1inch+4.6mm）に</span>
+\addtolength{\topmargin}{-\headheight}  <span class="co">%</span>
+\addtolength{\topmargin}{-\headsep}     <span class="co">% ヘッダの分だけ本文領域を移動させる</span>
+\addtolength{\textheight}{-60truemm}    <span class="co">% 下の余白も30mm（BOTTOM=-TOPだから+TOP+30mm）</span>
+\setlength{\textwidth}{\paperwidth}     <span class="co">% 紙面横幅を本文領域にする（RIGHT=-LEFT）</span>
+\setlength{\oddsidemargin}{-0.4truemm}  <span class="co">% 左の余白を25mm(=1inch-0.4mm)に</span>
+\setlength{\evensidemargin}{-0.4truemm} <span class="co">%</span>
+\addtolength{\textwidth}{-50truemm}     <span class="co">% 右の余白も25mm（RIGHT=-LEFT）</span>
+\begin{document}
+\section{セクション}
+
+\subsection{サブセクション}
+
+\end{document}</code></pre></div>
+</section>
+<section id="課題" class="slide level1">
+<h1>課題</h1>
+<ul>
+<li>数式を挿入した文書を作成せよ</li>
+<li>表を挿入した文書を作成せよ</li>
+<li>任意の画像を挿入した文書を作成せよ</li>
+</ul>
+<p>サンプルのtexファイルは <a href="./sample/sample.tex">ここにあります</a></p>
+<p>サンプルのshift_jis版は <a href="./sample/sample_shiftjis.tex">ここ</a></p>
+</section>
+<section id="参考元" class="slide level1">
+<h1>参考元</h1>
+<ul>
+<li><a href="https://texwiki.texjp.org/?LaTeX入門">latex 入門</a></li>
+<li><a href="http://qiita.com/zr_tex8r/items/5413a29d5276acac3771">日本人のための LaTeX タブー集 ～画像読込編～</a></li>
+<li><a href="ichiro-maruta.blogspot.jp/2013/03/latex.html">使ってはいけない LaTeX のコマンド・パッケージ・作法</a></li>
+<li><a href="http://joker.hatenablog.com/entry/2012/07/09/153537">TeXのjsarticleで余白設定</a></li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

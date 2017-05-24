@@ -13,7 +13,9 @@ SLIDE 形式(https://tono-chan.github.io/tex_slide/)
 
 ![](./figures/slide_url.png){width=5cm}
 
-注意！リンク消失の可能性あり。というか今年中(2017)にはこのファイルの公開を終了する。
+注意！
+
+リンク消失の可能性あり。というか今年中(2017)にはこのファイルの公開を終了する。
 
 ---
 
@@ -67,7 +69,7 @@ tex ファイルから pdfファイル作成までを記述
 
 使用している文字コードがshift_jisの場合(使用ソフトがL'ecrivain)
 
-```{bash id:"j333pozn"}
+```bash
 $ platex sample.tex     #dviファイルを作成
 $ dvipdfmx sample.dvi   #pdfファイルを作成
 ```
@@ -77,7 +79,7 @@ $ dvipdfmx sample.dvi   #pdfファイルを作成
 ### uplatex
 使用している文字コードがutf8の場合(使用ソフトがTexWorks)
 
-```{bash id:"j333pyom"}
+```bash
 $ uplatex sample.tex     #dviファイルを作成
 $ dvipdfmx sample.dvi    #pdfファイルを作成
 ```
@@ -87,12 +89,12 @@ $ dvipdfmx sample.dvi    #pdfファイルを作成
 ### 2回もコンパイルがめんどくさい人向け
 
 shift_jis の場合
-```{bash id:"j333q5cw"}
+```bash
 $ ptex2pdf -l sample.tex
 ```
 
 utf8の場合
-```{bash id:"j333qats"}
+```
 $ ptex2pdf -u -l sample.tex
 ```
 
@@ -388,33 +390,26 @@ L'crivain で作成した tex ファイルを TeXworks で開くと文字化け�
 ドキュメントクラスやドキュメントクラスオプションを変更する
 
 簡単な方法
-
-```
 \documentclass[11pt,a4paper]{jarticle}
 ↓
 \documentclass[11pt,a4j]{jsarticle}
-```
 
 自前で細かい単位まで調節したい場合
  * geometory パッケージで調節する
  * setlength で調節する．辛い．
-
-
 ---
 
 ### geometry の例
 
 プリアンブル部に記述する
 
-```latex
+```
 \usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry}
 ```
 
----
-
 ### setlength の例
 
-```latex
+````
 \documentclass[11pt,a4paper]{jsarticle}
 
 \setlength{\textheight}{\paperheight}   % 紙面縦幅を本文領域にする（BOTTOM=-TOP）
@@ -432,8 +427,7 @@ L'crivain で作成した tex ファイルを TeXworks で開くと文字化け�
 \subsection{サブセクション}
 
 \end{document}
-```
-
+````
 ---
 
 # 課題
