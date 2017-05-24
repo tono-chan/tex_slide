@@ -7,23 +7,22 @@
 
 HTML 形式(https://github.com/tono-chan/tex_slide/blob/master/draft.md)
 
-![markdown](./figures/markdown_url.png)
+![](./figures/markdown_url.png){width=5cm}
 
 SLIDE 形式(https://tono-chan.github.io/tex_slide/)
 
-![slide](./figures/slide_url.png)
+![](./figures/slide_url.png){width=5cm}
 
 ---
 
 ## 目次
-- LaTeX ってなに？
-- LaTeXのコンパイルの仕方
-- タイトルの作成
-- 概要の作成
-- 箇条書き
-- 表
-- 図
-- LaTeX を作るうえでの注意点
+
+* [latex ゼミ 2](#latex-ゼミ-2)
+* [LaTeX の書き方](#latex-の書き方)
+* [latex のエラー修正](#latex-のエラー修正)
+* [課題](#課題)
+* [参考元](#参考元)
+
 
 ---
 
@@ -118,7 +117,7 @@ $ pdf_previewer = 'SumatraPDF -reuse-instance'
 
 ---
 
-## いちいちコンパイルコマンドを打つのが面倒くさい人向け(続き)
+### いちいちコンパイルコマンドを打つのが面倒くさい人向け(続き)
 
 tex ファイルを作成した時に以下のコマンドを実行
 ```bash
@@ -136,16 +135,16 @@ latexのコンパイル方法は何通りかあるので興味があれば調べ
 ## タイトル
 
 ```latex
-\documentclass{...}
-\title{LaTeXゼミ}  -+
-\author{外村 耀平}  |プリアンブルに記述
-\date{\today}   -+
+\documentclass{...} 
+\title{LaTeXゼミ}  %プリアンブル部に記述
+\author{外村 耀平} 
+\date{\today}  
 \begin{document}
-\maketitle → 本文領域内に記述
+\maketitle % 本文領域内に記述
 ```
 
 
-![タイトル](./figures/title.png)
+![maketitleの表示例](./figures/title.png){width=5cm}
 
 ---
 
@@ -160,7 +159,7 @@ latexのコンパイル方法は何通りかあるので興味があれば調べ
 \end{abstract}
 ```
 
-![abstract](./figures/abstract.png)
+![abstract](./figures/abstract.png){width=10cm}
 
 ---
 
@@ -175,7 +174,7 @@ x^2 + 2x + 1 &= 0
 文中に数式$x^2 + 2x + 1 = 0$を挿入することもできる．
 ```
 
-![align](./figures/align.png)
+![数式の例1](./figures/align.png){width=10cm}
 
 \begin{eqnarray} や \begin{eqnarray*} を使用しているサイトが多いのですが，現在は非推奨です．
 
@@ -190,7 +189,7 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 \end{align}
 ```
 
-![align2](./figures/align2.png)
+![数式の例2](./figures/align2.png){width=4cm}
 
 ---
 
@@ -210,7 +209,7 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 \end{align}
 ```
 
-![mathrm](./figures/mathrm.png)
+![mathrmを適応した表示例](./figures/mathrm.png){width=10cm}
 
 ---
 
@@ -234,7 +233,7 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 \end{table}
 ```
 
-![table](./figures/table.png)
+![table環境の表示例](./figures/table.png){width=5cm}
 
 ---
 
@@ -251,13 +250,13 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 \section{図の貼り方}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.5\hsize]{./figures/kendai_a22.jpg}
+  \includegraphics[width=10cm]{./figures/kendai_a22.jpg}
   \caption{figure sample}
   \label{fig:sample}
 \end{figure}
 ```
 
-![figure](./figures/figure.png)
+![figure](./figures/figure.png){width=10cm}
 
 ---
 
@@ -276,7 +275,7 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 \end{figure}
 ```
 
-![figure](./figures/figure2.png)
+![minipageの表示例](./figures/figure2.png){width=10cm}
 
 ---
 
@@ -285,8 +284,45 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 
 最近のlatexは png や jpg 形式の画像でも直接貼れるので，変換する必要はなくなっている(dvipdfmxを使う場合)
 
+なお、我らが研究室のサイトには「図の画像は、必ずeps形式で用紙してincludeする」と書いてある。
 
 ---
+
+## 参考文献の書き方
+
+```latex
+\begin{thebibliography}{9} % 10以上参考文献を記述する場合、値を99にする。
+  \bibitem{キー1} 著者:タイトル1,出典,(年)
+  \bibitem{キー2} 著者:タイトル2,出典,(年)
+\end{thebibliography}
+```
+
+![参考文献の表示例](./figures/bibref.png){width=5cm}
+
+---
+
+## 研究室内でのルール1 
+
+ * コンパイル後のメッセージを確認して，エラー(Error)やワーニング(Warning)の有無を確認して，基本的にエラーが出ないようにする．
+ * コンパイル後，ラベルの重複や対応にミスがないか，?のまま残っていないかを確認する．
+ * 指定のスタイルファイルを使用している場合，そのフォーマットを崩す命令，vspace, hspaceなどは使ってはいけない．
+ * 図の画像は，必ずeps形式で用意してincludeする．
+ * 図の位置は，必ず[t]で指定する
+ * 画像のサイズ変更には，原則width=のみを使う．
+
+---
+
+## 研究室内でのルール2 
+
+ * 図中の文字サイズは，本文中の文字サイズと同じか，やや小さい程度までになるようにする．
+ * 表の文字サイズ変更にscaleboxを使う場合，原則0.8未満は使わない．一行に入らないときにはレイアウト変更により対応する．
+ * 改行は空行を空けることで行う．\\（バックスラッシュ2つによる改行）は表以外では使わない
+ * 数字はすべて半角を使用する
+ * ・や〜などの記号は使わない．
+ * 項より細かい部分を作成してはいけない．項より細かい部分の作成が必要な場合は，全体の構成が悪いので，構成を見直す．
+
+---
+
 
 # latex のエラー修正
 
@@ -355,33 +391,39 @@ L'crivain で作成した tex ファイルを TeXworks で開くと文字化け�
 \documentclass[11pt,a4j]{jsarticle}
 
 自前で細かい単位まで調節したい場合
-setlength で調節する．辛い．
-
+ * geometory パッケージで調節する
+ * setlength で調節する．辛い．
 ---
 
+### geometry の例
+
+プリアンブル部に記述する
+
+```
+\usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry}
+```
 
 ### setlength の例
 
 ````
-¥documentclass[11pt,a4paper]{jsarticle}
+\documentclass[11pt,a4paper]{jsarticle}
 
-¥setlength{¥textheight}{¥paperheight}   % 紙面縦幅を本文領域にする（BOTTOM=-TOP）
-¥setlength{¥topmargin}{4.6truemm}       % 上の余白を30mm（=1inch+4.6mm）に
-¥addtolength{¥topmargin}{-¥headheight}  %
-¥addtolength{¥topmargin}{-¥headsep}     % ヘッダの分だけ本文領域を移動させる
-¥addtolength{¥textheight}{-60truemm}    % 下の余白も30mm（BOTTOM=-TOPだから+TOP+30mm）
-¥setlength{¥textwidth}{¥paperwidth}     % 紙面横幅を本文領域にする（RIGHT=-LEFT）
-¥setlength{¥oddsidemargin}{-0.4truemm}  % 左の余白を25mm(=1inch-0.4mm)に
-¥setlength{¥evensidemargin}{-0.4truemm} %
-¥addtolength{¥textwidth}{-50truemm}     % 右の余白も25mm（RIGHT=-LEFT）
-¥begin{document}
-¥section{セクション}
-セクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクションセクション
-¥subsection{サブセクション}
-サブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクションサブセクション
-¥end{document}
+\setlength{\textheight}{\paperheight}   % 紙面縦幅を本文領域にする（BOTTOM=-TOP）
+\setlength{\topmargin}{4.6truemm}       % 上の余白を30mm（=1inch+4.6mm）に
+\addtolength{\topmargin}{-\headheight}  %
+\addtolength{\topmargin}{-\headsep}     % ヘッダの分だけ本文領域を移動させる
+\addtolength{\textheight}{-60truemm}    % 下の余白も30mm（BOTTOM=-TOPだから+TOP+30mm）
+\setlength{\textwidth}{\paperwidth}     % 紙面横幅を本文領域にする（RIGHT=-LEFT）
+\setlength{\oddsidemargin}{-0.4truemm}  % 左の余白を25mm(=1inch-0.4mm)に
+\setlength{\evensidemargin}{-0.4truemm} %
+\addtolength{\textwidth}{-50truemm}     % 右の余白も25mm（RIGHT=-LEFT）
+\begin{document}
+\section{セクション}
+
+\subsection{サブセクション}
+
+\end{document}
 ````
-
 ---
 
 # 課題
@@ -398,11 +440,9 @@ setlength で調節する．辛い．
 
 ---
 
-## 参考元
+# 参考元
 
 - [latex 入門](https://texwiki.texjp.org/?LaTeX入門)
-
 - [日本人のための LaTeX タブー集 ～画像読込編～](http://qiita.com/zr_tex8r/items/5413a29d5276acac3771)
-
 - [使ってはいけない LaTeX のコマンド・パッケージ・作法](ichiro-maruta.blogspot.jp/2013/03/latex.html)
-
+- [TeXのjsarticleで余白設定 ](http://joker.hatenablog.com/entry/2012/07/09/153537)

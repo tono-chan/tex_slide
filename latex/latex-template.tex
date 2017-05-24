@@ -1,0 +1,49 @@
+\documentclass[a4paper,uplatex]{jsarticle}
+
+% 数式の設定
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+
+% グラフィック設定
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{listings}
+\lstset{%
+basicstyle={\small},%
+identifierstyle={\small},%
+commentstyle={\small\itshape},%
+keywordstyle={\small\bfseries},%
+ndkeywordstyle={\small},%
+stringstyle={\small},
+frame={tb},
+breaklines=true,
+columns=[l]{fullflexible},%
+numbers=none,%
+xrightmargin=0zw,%
+xleftmargin=3zw,%
+numberstyle={\scriptsize},%
+stepnumber=1,
+numbersep=1zw,%
+lineskip=-0.5ex%
+}
+
+% コード設定
+\usepackage{hyperref}
+
+% 基本パッケージ
+\usepackage{tabularx}
+\usepackage{enumerate}
+
+
+\fontsize{11pt}{ 17.8pt }
+\title{}
+\author{外村 耀平}
+%\date{}
+
+\begin{document}
+\maketitle
+
+\input{draft}
+
+\end{document}

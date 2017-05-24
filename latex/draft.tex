@@ -1,0 +1,604 @@
+\hypertarget{latex-ux30bcux30df-2}{\section{latex ゼミ
+2}\label{latex-ux30bcux30df-2}}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux672cux65e5ux306eux30b9ux30e9ux30a4ux30c9}{\subsection{本日のスライド}\label{ux672cux65e5ux306eux30b9ux30e9ux30a4ux30c9}}
+
+HTML 形式(https://github.com/tono-chan/tex\_slide/blob/master/draft.md)
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=5.00000cm]{./figures/markdown_url.png}
+\caption{}
+\end{figure}
+
+SLIDE 形式(https://tono-chan.github.io/tex\_slide/)
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=5.00000cm]{./figures/slide_url.png}
+\caption{}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux76eeux6b21}{\subsection{目次}\label{ux76eeux6b21}}
+
+\begin{itemize}
+\tightlist
+\item
+  \protect\hyperlink{latex-ux30bcux30df-2}{latex ゼミ 2}
+\item
+  \protect\hyperlink{ux672cux65e5ux306eux30b9ux30e9ux30a4ux30c9}{本日のスライド}
+\item
+  \protect\hyperlink{ux76eeux6b21}{目次}
+\item
+  \protect\hyperlink{latex-ux3063ux3066ux4f55}{LaTeX って何？}
+\item
+  \protect\hyperlink{ux7d44ux7248ux3063ux3066}{組版って？}
+\item
+  \protect\hyperlink{tex-ux304cux3067ux304dux305fux7531ux6765}{TeX
+  ができた由来}
+\item
+  \protect\hyperlink{latexux306eux30b3ux30f3ux30d1ux30a4ux30ebux306eux4ed5ux65b9}{LATEXのコンパイルの仕方}
+\item
+  \protect\hyperlink{latex-ux306eux66f8ux304dux65b9}{LaTeX の書き方}
+\item
+  \protect\hyperlink{ux30bfux30a4ux30c8ux30eb}{タイトル}
+\item
+  \protect\hyperlink{ux6982ux8981}{概要}
+\item
+  \protect\hyperlink{ux6570ux5f0f}{数式}
+\item
+  \protect\hyperlink{ux8907ux96d1ux306aux6570ux5f0f}{複雑な数式}
+\item
+  \protect\hyperlink{ux6570ux5f0fux3092ux66f8ux304fux3068ux304dux306eux6ce8ux610fux70b9}{数式を書くときの注意点}
+\item
+  \protect\hyperlink{ux8868ux306eux8cbcux308aux65b9}{表の貼り方}
+\item
+  \protect\hyperlink{ux56f3ux306eux8cbcux308aux65b9}{図の貼り方}
+\item
+  \protect\hyperlink{ux56f3ux3092ux4e26ux3079ux308b}{図を並べる}
+\item
+  \protect\hyperlink{eps-ux753bux50cfux306eux6271ux3044ux306bux3064ux3044ux3066}{eps
+  画像の扱いについて}
+\item
+  \protect\hyperlink{ux53c2ux8003ux6587ux732eux306eux66f8ux304dux65b9}{参考文献の書き方}
+\item
+  \protect\hyperlink{ux7814ux7a76ux5ba4ux5185ux3067ux306eux30ebux30fcux30eb1}{研究室内でのルール1}
+\item
+  \protect\hyperlink{ux7814ux7a76ux5ba4ux5185ux3067ux306eux30ebux30fcux30eb2}{研究室内でのルール2}
+\item
+  \protect\hyperlink{latex-ux306eux30a8ux30e9ux30fcux4feeux6b63}{latex
+  のエラー修正}
+\item
+  \protect\hyperlink{ux3088ux304fux3042ux308bux30a8ux30e9ux30fc}{よくあるエラー}
+\item
+  \protect\hyperlink{ux6587ux5b57ux30b3ux30fcux30c9ux306eux30a8ux30e9ux30fc}{文字コードのエラー}
+\item
+  \protect\hyperlink{ux30bdux30d5ux30c8ux30a6ux30a7ux30a2ux306eux30c7ux30d5ux30a9ux30ebux30c8ux30a8ux30f3ux30b3ux30fcux30c9}{ソフトウェアのデフォルトエンコード}
+\item
+  \protect\hyperlink{ux753bux50cfux304cux306aux3044ux3068ux304d}{画像がないとき}
+\item
+  \protect\hyperlink{ux4f59ux767dux3092ux8abfux7bc0ux3057ux305fux3044}{余白を調節したい}
+\item
+  \protect\hyperlink{ux8ab2ux984c}{課題}
+\item
+  \protect\hyperlink{ux53c2ux8003ux5143}{参考元}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{latex-ux3063ux3066ux4f55}{\subsection{LaTeX
+って何？}\label{latex-ux3063ux3066ux4f55}}
+
+TeX とは理系でよく使われる組版言語です．
+
+LaTeX はTeXに対して機能拡張をして使いやすくしたものです．
+
+LaTeX を利用することで整った体裁の文書を作成できます．
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux7d44ux7248ux3063ux3066}{\subsection{組版って？}\label{ux7d44ux7248ux3063ux3066}}
+
+組版・・・・印刷を作るときに、どんなサイズの紙に、紙のどのあたりに、どんな文字で、どんな並べ方で、
+
+文字や図版をレイアウトするかといったレイアウト作業
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{tex-ux304cux3067ux304dux305fux7531ux6765}{\subsection{TeX
+ができた由来}\label{tex-ux304cux3067ux304dux305fux7531ux6765}}
+
+ドナルド・クヌース(Donald Ervin Knuth)
+って人が自分の本を出版するときに、業者に依頼した組版の出来に不満。
+
+あまりの汚さにブチ切れたクヌース先生が自前で組版するために作ったソフト。
+
+なければ自分で作るってところがプログラマー気質ですよね。
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{latexux306eux30b3ux30f3ux30d1ux30a4ux30ebux306eux4ed5ux65b9}{\subsection{LATEXのコンパイルの仕方}\label{latexux306eux30b3ux30f3ux30d1ux30a4ux30ebux306eux4ed5ux65b9}}
+
+GUIの操作は使用するソフトによって異なるので省略。
+
+コマンドライン操作のみで説明します。
+
+tex ファイルから pdfファイル作成までを記述
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{platex}\label{platex}
+
+使用している文字コードがshift\_jisの場合(使用ソフトがL'ecrivain)
+
+\begin{lstlisting}[language=bash]
+$ platex sample.tex     #dviファイルを作成
+$ dvipdfmx sample.dvi   #pdfファイルを作成
+\end{lstlisting}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{uplatex}\label{uplatex}
+
+使用している文字コードがutf8の場合(使用ソフトがTexWorks)
+
+\begin{lstlisting}[language=bash]
+$ uplatex sample.tex     #dviファイルを作成
+$ dvipdfmx sample.dvi    #pdfファイルを作成
+\end{lstlisting}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{2回もコンパイルがめんどくさい人向け}\label{ux56deux3082ux30b3ux30f3ux30d1ux30a4ux30ebux304cux3081ux3093ux3069ux304fux3055ux3044ux4ebaux5411ux3051}
+
+shift\_jis の場合
+
+\begin{lstlisting}[language=bash]
+$ ptex2pdf -l sample.tex
+\end{lstlisting}
+
+utf8の場合
+
+\begin{lstlisting}
+$ ptex2pdf -u -l sample.tex
+\end{lstlisting}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{いちいちコンパイルコマンドを打つのが面倒くさい人向け：下準備}\label{ux3044ux3061ux3044ux3061ux30b3ux30f3ux30d1ux30a4ux30ebux30b3ux30deux30f3ux30c9ux3092ux6253ux3064ux306eux304cux9762ux5012ux304fux3055ux3044ux4ebaux5411ux3051ux4e0bux6e96ux5099}
+
+下準備
+
+以下のファイルをユーザーフォルダ直下(compフォルダ)に
+\href{/distribute/.latexmkrc}{.latexmkrc} という名前で保存
+
+\begin{lstlisting}[language=Perl]
+#!/usr/bin/env perl
+$latex            = 'platex -synctex=1 -halt-on-error';
+$latex_silent     = 'platex -synctex=1 -halt-on-error -interaction=batchmode';
+$bibtex           = 'pbibtex';
+$dvipdf           = 'dvipdfmx %O -o %D %S';
+$makeindex        = 'mendex %O -o %D %S';
+$max_repeat       = 5;
+$pdf_mode     = 3; # generates pdf via dvipdfmx
+
+$ pvc_view_file_via_temporary = 0;
+$ pdf_previewer = 'SumatraPDF -reuse-instance'
+\end{lstlisting}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{いちいちコンパイルコマンドを打つのが面倒くさい人向け(続き)}\label{ux3044ux3061ux3044ux3061ux30b3ux30f3ux30d1ux30a4ux30ebux30b3ux30deux30f3ux30c9ux3092ux6253ux3064ux306eux304cux9762ux5012ux304fux3055ux3044ux4ebaux5411ux3051ux7d9aux304d}
+
+tex ファイルを作成した時に以下のコマンドを実行
+
+\begin{lstlisting}[language=bash]
+$ latexmk -pvc sample.tex
+\end{lstlisting}
+
+latexのコンパイル方法は何通りかあるので興味があれば調べてください。
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{latex-ux306eux66f8ux304dux65b9}{\section{LaTeX
+の書き方}\label{latex-ux306eux66f8ux304dux65b9}}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux30bfux30a4ux30c8ux30eb}{\subsection{タイトル}\label{ux30bfux30a4ux30c8ux30eb}}
+
+\begin{lstlisting}
+\documentclass{...} 
+\title{LaTeXゼミ}  %プリアンブル部に記述
+\author{外村 耀平} 
+\date{\today}  
+\begin{document}
+\maketitle % 本文領域内に記述
+\end{lstlisting}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=5.00000cm]{./figures/title.png}
+\caption{maketitleの表示例}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux6982ux8981}{\subsection{概要}\label{ux6982ux8981}}
+
+論文内容を短くまとめて書いたもの
+
+\begin{lstlisting}
+\begin{abstract}
+この文書ではLaTeXの書き方について説明する。ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+\noindent
+見出し用語:AdaBoost 分類器，網膜画像, 血管分割
+\end{abstract}
+\end{lstlisting}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10.00000cm]{./figures/abstract.png}
+\caption{abstract}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux6570ux5f0f}{\subsection{数式}\label{ux6570ux5f0f}}
+
+\begin{lstlisting}
+\begin{align}
+x^2 + 2x + 1 &= 0
+(x + 1)^2 &= 0
+\end{align}
+
+文中に数式$x^2 + 2x + 1 = 0$を挿入することもできる．
+\end{lstlisting}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10.00000cm]{./figures/align.png}
+\caption{数式の例1}
+\end{figure}
+
+\textbackslash{}begin\{eqnarray\} や \textbackslash{}begin\{eqnarray*\}
+を使用しているサイトが多いのですが，現在は非推奨です．
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux8907ux96d1ux306aux6570ux5f0f}{\subsection{複雑な数式}\label{ux8907ux96d1ux306aux6570ux5f0f}}
+
+\begin{lstlisting}
+\begin{align}
+\int_{1}^{4}x dx = \left[ \frac{1}{2}x^2 \right]_1^4
+x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
+\end{align}
+\end{lstlisting}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=4.00000cm]{./figures/align2.png}
+\caption{数式の例2}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux6570ux5f0fux3092ux66f8ux304fux3068ux304dux306eux6ce8ux610fux70b9}{\subsection{数式を書くときの注意点}\label{ux6570ux5f0fux3092ux66f8ux304fux3068ux304dux306eux6ce8ux610fux70b9}}
+
+数式内で英単語を入れたいときはローマン体になるように！(イタリックは基本的に変数扱い)
+
+\begin{lstlisting}
+\mathrm{ローマン体にしたい部分}
+\end{lstlisting}
+
+\begin{lstlisting}
+\begin{align}
+\times precision &=
+\displaystyle \frac{true\ positive}{true\ positive + false\ positive} \nonumber\\
+\bigcirc \mathrm{recall} &=
+\displaystyle \frac{ \mathrm{true\ positive}}{\mathrm{true\ positive} + \mathrm{false\ negative}} \nonumber
+\end{align}
+\end{lstlisting}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10.00000cm]{./figures/mathrm.png}
+\caption{mathrmを適応した表示例}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux8868ux306eux8cbcux308aux65b9}{\subsection{表の貼り方}\label{ux8868ux306eux8cbcux308aux65b9}}
+
+\begin{lstlisting}
+\section{表の作成}
+\begin{table}
+  \caption{table sample}
+  \label{tb:sample}
+  \centering
+  \begin{tabular}{lcr}
+    \hline
+    番号 & 名前 & 点数 \\
+    \hline \hline
+    1 & 一郎 & 100 \\
+    2 & 次郎 & 95 \\
+    3 & 三郎 & 60 \\
+    \hline
+  \end{tabular}
+\end{table}
+\end{lstlisting}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=5.00000cm]{./figures/table.png}
+\caption{table環境の表示例}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux56f3ux306eux8cbcux308aux65b9}{\subsection{図の貼り方}\label{ux56f3ux306eux8cbcux308aux65b9}}
+
+プリアンブル部(begin\{document\}の手前)に以下のパッケージを指定
+
+\begin{lstlisting}
+\usepackage[dvipdfmx]{graphicx}
+\end{lstlisting}
+
+図を貼りたい場所に書く
+
+\begin{lstlisting}
+\section{図の貼り方}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=10cm]{./figures/kendai_a22.jpg}
+  \caption{figure sample}
+  \label{fig:sample}
+\end{figure}
+\end{lstlisting}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10.00000cm]{./figures/figure.png}
+\caption{figure}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux56f3ux3092ux4e26ux3079ux308b}{\subsection{図を並べる}\label{ux56f3ux3092ux4e26ux3079ux308b}}
+
+\begin{lstlisting}
+\begin{figure}[htbp]
+  \centering
+  \begin{minipage}{0.48\hsize}
+    \includegraphics[width=\hsize]{./figures/kendai_a22.jpg}
+  \end{minipage}
+  \begin{minipage}{0.48\hsize}
+    \includegraphics[width=\hsize]{./figures/kendai_a22.jpg}
+  \end{minipage}
+  \caption{2 figures sample}
+\end{figure}
+\end{lstlisting}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10.00000cm]{./figures/figure2.png}
+\caption{minipageの表示例}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{eps-ux753bux50cfux306eux6271ux3044ux306bux3064ux3044ux3066}{\subsection{eps
+画像の扱いについて}\label{eps-ux753bux50cfux306eux6271ux3044ux306bux3064ux3044ux3066}}
+
+古いlatexの使い方紹介サイトでは画像を貼るときは，「eps画像に変換して画像を貼りなさい」と書いてあることがある．
+
+最近のlatexは png や jpg
+形式の画像でも直接貼れるので，変換する必要はなくなっている(dvipdfmxを使う場合)
+
+なお、我らが研究室のサイトには「図の画像は、必ずeps形式で用紙してincludeする」と書いてある。
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux53c2ux8003ux6587ux732eux306eux66f8ux304dux65b9}{\subsection{参考文献の書き方}\label{ux53c2ux8003ux6587ux732eux306eux66f8ux304dux65b9}}
+
+\begin{lstlisting}
+\begin{thebibliography}{9} % 10以上参考文献を記述する場合、値を99にする。
+  \bibitem{キー1} 著者:タイトル1,出典,(年)
+  \bibitem{キー2} 著者:タイトル2,出典,(年)
+\end{thebibliography}
+\end{lstlisting}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=5.00000cm]{./figures/bibref.png}
+\caption{参考文献の表示例}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux7814ux7a76ux5ba4ux5185ux3067ux306eux30ebux30fcux30eb1}{\subsection{研究室内でのルール1}\label{ux7814ux7a76ux5ba4ux5185ux3067ux306eux30ebux30fcux30eb1}}
+
+\begin{itemize}
+\tightlist
+\item
+  コンパイル後のメッセージを確認して，エラー(Error)やワーニング(Warning)の有無を確認して，基本的にエラーが出ないようにする．
+\item
+  コンパイル後，ラベルの重複や対応にミスがないか，?のまま残っていないかを確認する．
+\item
+  指定のスタイルファイルを使用している場合，そのフォーマットを崩す命令，vspace,
+  hspaceなどは使ってはいけない．
+\item
+  図の画像は，必ずeps形式で用意してincludeする．
+\item
+  図の位置は，必ず{[}t{]}で指定する
+\item
+  画像のサイズ変更には，原則width=のみを使う．
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux7814ux7a76ux5ba4ux5185ux3067ux306eux30ebux30fcux30eb2}{\subsection{研究室内でのルール2}\label{ux7814ux7a76ux5ba4ux5185ux3067ux306eux30ebux30fcux30eb2}}
+
+\begin{itemize}
+\tightlist
+\item
+  図中の文字サイズは，本文中の文字サイズと同じか，やや小さい程度までになるようにする．
+\item
+  表の文字サイズ変更にscaleboxを使う場合，原則0.8未満は使わない．一行に入らないときにはレイアウト変更により対応する．
+\item
+  改行は空行を空けることで行う．\textbackslash{}（バックスラッシュ2つによる改行）は表以外では使わない
+\item
+  数字はすべて半角を使用する
+\item
+  ・や〜などの記号は使わない．
+\item
+  項より細かい部分を作成してはいけない．項より細かい部分の作成が必要な場合は，全体の構成が悪いので，構成を見直す．
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{latex-ux306eux30a8ux30e9ux30fcux4feeux6b63}{\section{latex
+のエラー修正}\label{latex-ux306eux30a8ux30e9ux30fcux4feeux6b63}}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux3088ux304fux3042ux308bux30a8ux30e9ux30fc}{\subsection{よくあるエラー}\label{ux3088ux304fux3042ux308bux30a8ux30e9ux30fc}}
+
+\begin{itemize}
+\item
+  Please type another input file name : ファイル名間違い
+\item
+  ! Missing \$ inserted\ldots{}.? :
+  \(の数の不整合。数式は\)\(ではさむ。単独の\)出力は \$と入れる。
+\item
+  ! Emergency stop\ldots{}..l.19 : 19行目が怪しい
+\end{itemize}
+
+\href{http://ribf.riken.jp/apr/guide-jp/LaTeX_Manual-jp.html}{LaTeX
+Manual}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux6587ux5b57ux30b3ux30fcux30c9ux306eux30a8ux30e9ux30fc}{\subsection{文字コードのエラー}\label{ux6587ux5b57ux30b3ux30fcux30c9ux306eux30a8ux30e9ux30fc}}
+
+日本語でlatex
+を書いているときに問題になるのが文字コードの違い。利用するOSやソフトによってデフォルトの文字コードが異なる。
+
+\begin{itemize}
+\tightlist
+\item
+  Windows : Shift-Jis
+\item
+  Mac : UTF8
+\item
+  Linux : UTF8 ( 古いバージョンだと EUC )
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux30bdux30d5ux30c8ux30a6ux30a7ux30a2ux306eux30c7ux30d5ux30a9ux30ebux30c8ux30a8ux30f3ux30b3ux30fcux30c9}{\subsection{ソフトウェアのデフォルトエンコード}\label{ux30bdux30d5ux30c8ux30a6ux30a7ux30a2ux306eux30c7ux30d5ux30a9ux30ebux30c8ux30a8ux30f3ux30b3ux30fcux30c9}}
+
+ソフトウェアの設定によってデフォルトの文字コードを変更可能だが、ソフトによっても初期設定が異なる。
+
+\begin{itemize}
+\tightlist
+\item
+  L'ecrivain : Shift-Jis
+\item
+  TeXworks : UTF8
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{文字コードの違いで困ること}\label{ux6587ux5b57ux30b3ux30fcux30c9ux306eux9055ux3044ux3067ux56f0ux308bux3053ux3068}
+
+文字化けする！
+
+L'crivain で作成した tex ファイルを TeXworks
+で開くと文字化けします。逆もしかり。
+
+適切な文字コードを指定してからファイルを開きなおしてください。
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux753bux50cfux304cux306aux3044ux3068ux304d}{\subsection{画像がないとき}\label{ux753bux50cfux304cux306aux3044ux3068ux304d}}
+
+\begin{lstlisting}
+ LaTeX Warning: File `****.jpg' not found on input\|
+\end{lstlisting}
+
+適切なファイル名を指定してください
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{ux4f59ux767dux3092ux8abfux7bc0ux3057ux305fux3044}{\subsection{余白を調節したい}\label{ux4f59ux767dux3092ux8abfux7bc0ux3057ux305fux3044}}
+
+ドキュメントクラスやドキュメントクラスオプションを変更する
+
+簡単な方法 \documentclass[11pt,a4paper]{jarticle}
+↓
+\documentclass[11pt,a4j]{jsarticle}
+
+自前で細かい単位まで調節したい場合
+ * geometory パッケージで調節する
+ * setlength で調節する．辛い．
+---
+
+### geometry の例
+
+プリアンブル部に記述する
+
+```
+\usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry}
+```
+
+### setlength の例
+
+````
+\documentclass[11pt,a4paper]{jsarticle}
+
+\setlength{\textheight}{\paperheight}   % 紙面縦幅を本文領域にする（BOTTOM=-TOP）
+\setlength{\topmargin}{4.6truemm}       % 上の余白を30mm（=1inch+4.6mm）に
+\addtolength{\topmargin}{-\headheight}  %
+\addtolength{\topmargin}{-\headsep}     % ヘッダの分だけ本文領域を移動させる
+\addtolength{\textheight}{-60truemm}    % 下の余白も30mm（BOTTOM=-TOPだから+TOP+30mm）
+\setlength{\textwidth}{\paperwidth}     % 紙面横幅を本文領域にする（RIGHT=-LEFT）
+\setlength{\oddsidemargin}{-0.4truemm}  % 左の余白を25mm(=1inch-0.4mm)に
+\setlength{\evensidemargin}{-0.4truemm} %
+\addtolength{\textwidth}{-50truemm}     % 右の余白も25mm（RIGHT=-LEFT）
+
+\begin{document}
+\section{セクション}
+
+\subsection{サブセクション}
+
+\end{document}
+````
+---
+
+# 課題
+
+- 数式を挿入した文書を作成せよ
+- 表を挿入した文書を作成せよ
+- 任意の画像を挿入した文書を作成せよ
+
+サンプルのtexファイルは
+[ここにあります](./sample/sample.tex)
+
+サンプルのshift_jis版は
+[ここ](./sample/sample_shiftjis.tex)
+
+---
+
+# 参考元
+
+- [latex 入門](https://texwiki.texjp.org/?LaTeX入門)
+- [日本人のための LaTeX タブー集 ～画像読込編～](http://qiita.com/zr_tex8r/items/5413a29d5276acac3771)
+- [使ってはいけない LaTeX のコマンド・パッケージ・作法](ichiro-maruta.blogspot.jp/2013/03/latex.html)
+- [TeXのjsarticleで余白設定 ](http://joker.hatenablog.com/entry/2012/07/09/153537)
+
+
