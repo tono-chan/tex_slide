@@ -46,7 +46,7 @@ code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Ann
 code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -72,14 +72,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2 id="本日のスライド">本日のスライド</h2>
 <p>HTML 形式(https://github.com/tono-chan/tex_slide/blob/master/draft.md)</p>
 <figure>
-<img src="./figures/markdown_url.png" width="377" />
+<img src="./figures/markdown_url.png" width="188" />
 </figure>
 <p>SLIDE 形式(https://tono-chan.github.io/tex_slide/)</p>
 <figure>
 <img src="./figures/slide_url.png" width="188" />
 </figure>
-<p>注意！</p>
-<p>リンク消失の可能性あり。というか今年中(2017)にはこのファイルの公開を終了する。</p>
+<p>注意！リンク消失の可能性あり。というか今年中(2017)にはこのファイルの公開を終了する。</p>
 </section>
 <section class="slide level1">
 
@@ -139,7 +138,7 @@ $ <span class="kw">dvipdfmx</span> sample.dvi    <span class="co">#pdfファイ�
 <p>shift_jis の場合</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">ptex2pdf</span> -l sample.tex</code></pre></div>
 <p>utf8の場合</p>
-<pre><code>$ ptex2pdf -u -l sample.tex</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">ptex2pdf</span> -u -l sample.tex</code></pre></div>
 </section>
 <section class="slide level1">
 
@@ -300,6 +299,7 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 <section class="slide level1">
 
 <h2 id="参考文献の書き方">参考文献の書き方</h2>
+<p>thebibliography環境を用いる。</p>
 <div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\begin{thebibliography}{9} <span class="co">% 10以上参考文献を記述する場合、値を99にする。</span>
   \bibitem{キー1} 著者:タイトル1,出典,(年)
   \bibitem{キー2} 著者:タイトル2,出典,(年)
@@ -307,6 +307,17 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 <figure>
 <img src="./figures/bibref.png" alt="参考文献の表示例" width="188" /><figcaption>参考文献の表示例</figcaption>
 </figure>
+</section>
+<section class="slide level1">
+
+<h2 id="参考文献の書き方2">参考文献の書き方2</h2>
+<p>bibtexを用いることで参考文献の挿入作業を自動化することができる。</p>
+<p>利用方法</p>
+<ul>
+<li>文献を事前にデータベースに登録しておく</li>
+<li>TeXファイルで引用の命令を書く</li>
+<li>コンパイル時にBibTeXを実行する。TeXファイルで引用されている文献だけをデータベースから探して、指定した形式でreferenceを自動で作成してくれる。</li>
+</ul>
 </section>
 <section class="slide level1">
 
@@ -446,6 +457,8 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
       Reveal.initialize({
         // Transition style
         transition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Parallax background image
+        parallaxBackgroundImage: 'images/books_light.jpg', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 
         // Optional reveal.js plugins
         dependencies: [

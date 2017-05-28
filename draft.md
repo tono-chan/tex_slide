@@ -39,14 +39,16 @@ LaTeX を利用することで整った体裁の文書を作成できます．
 
 ## 組版って？
 
-組版・・・・印刷を作るときに、どんなサイズの紙に、紙のどのあたりに、どんな文字で、どんな並べ方で、
+組版・・・・印刷を作るときに、どんなサイズの紙に、  
+紙のどのあたりに、どんな文字で、どんな並べ方で、
 
 文字や図版をレイアウトするかといったレイアウト作業
 
 ---
 
 ## TeX ができた由来
-ドナルド・クヌース(Donald Ervin Knuth) って人が自分の本を出版するときに、業者に依頼した組版の出来に不満。
+ドナルド・クヌース(Donald Ervin Knuth) って人が自分の本を出版するときに、  
+業者に依頼した組版の出来に不満。
 
 あまりの汚さにブチ切れたクヌース先生が自前で組版するために作ったソフト。
 
@@ -55,6 +57,7 @@ LaTeX を利用することで整った体裁の文書を作成できます．
 ---
 
 ## LATEXのコンパイルの仕方
+
 GUIの操作は使用するソフトによって異なるので省略。
 
 コマンドライン操作のみで説明します。
@@ -67,7 +70,7 @@ tex ファイルから pdfファイル作成までを記述
 
 使用している文字コードがshift_jisの場合(使用ソフトがL'ecrivain)
 
-```{bash id:"j333pozn"}
+```bash
 $ platex sample.tex     #dviファイルを作成
 $ dvipdfmx sample.dvi   #pdfファイルを作成
 ```
@@ -77,7 +80,7 @@ $ dvipdfmx sample.dvi   #pdfファイルを作成
 ### uplatex
 使用している文字コードがutf8の場合(使用ソフトがTexWorks)
 
-```{bash id:"j333pyom"}
+```bash
 $ uplatex sample.tex     #dviファイルを作成
 $ dvipdfmx sample.dvi    #pdfファイルを作成
 ```
@@ -87,12 +90,12 @@ $ dvipdfmx sample.dvi    #pdfファイルを作成
 ### 2回もコンパイルがめんどくさい人向け
 
 shift_jis の場合
-```{bash id:"j333q5cw"}
+```bash
 $ ptex2pdf -l sample.tex
 ```
 
 utf8の場合
-```{bash id:"j333qats"}
+```bash
 $ ptex2pdf -u -l sample.tex
 ```
 
@@ -292,6 +295,8 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 
 ## 参考文献の書き方
 
+thebibliography環境を用いる。
+
 ```latex
 \begin{thebibliography}{9} % 10以上参考文献を記述する場合、値を99にする。
   \bibitem{キー1} 著者:タイトル1,出典,(年)
@@ -300,6 +305,20 @@ x = \frac{2k + 1}{ \frac{2k}{k^2+5}}\right|
 ```
 
 ![参考文献の表示例](./figures/bibref.png){width=5cm}
+
+---
+
+## 参考文献の書き方2
+
+bibtexを用いることで参考文献の挿入作業を自動化することができる。
+
+利用方法
+ 
+ * 文献を事前にデータベースに登録しておく
+ * TeXファイルで引用の命令を書く
+ * コンパイル時にBibTeXを実行する。TeXファイルで引用されている文献だけをデータベースから探して、指定した形式でreferenceを自動で作成してくれる。
+
+詳細は各自で調べてください。
 
 ---
 
